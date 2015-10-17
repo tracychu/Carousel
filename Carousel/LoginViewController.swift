@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
     // declare variables
     var scrollViewInitialY: CGFloat!
     var buttonViewInitialY: CGFloat!
-    let alertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert) 
+    let alertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert)
     
     
     override func viewDidLoad() {
@@ -63,8 +63,20 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
         activityIndicator.startAnimating()
         delay(2) {
         self.activityIndicator.stopAnimating()
-        self.performSegueWithIdentifier("loginSegue", sender: nil)
+            
+        // create a cancel action
+        let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+        // handle cancel response here. Doing nothing will dismiss the view.
         }
+        // add the cancel action to the alertController
+        self.alertController.addAction(cancelAction)
+            
+        self.presentViewController(self.alertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
+            }
+            
+        self.performSegueWithIdentifier("loginSegue", sender: nil)
+            }
     }
     
     
