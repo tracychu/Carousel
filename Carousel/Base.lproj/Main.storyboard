@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xEa-aE-Y5Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2h7-vx-ID6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
@@ -104,13 +104,17 @@
                                                 <rect key="frame" x="9" y="17" width="288" height="51"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <action selector="didTapSignin:" destination="2h7-vx-ID6" eventType="touchUpInside" id="NZj-An-Mfe"/>
+                                                    <action selector="didTapSignin:" destination="2h7-vx-ID6" eventType="touchUpInside" id="jEc-k2-bZT"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign_in_buttons" id="v5S-Nt-ddX">
                                                 <rect key="frame" x="4" y="6" width="299" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" id="pCM-RC-inT">
+                                                <rect key="frame" x="237" y="33" width="20" height="20"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -133,8 +137,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="700"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="pCM-RC-inT" id="hIJ-Fi-4hO"/>
                         <outlet property="buttonView" destination="vxu-Jp-gBz" id="PBW-XI-hlz"/>
+                        <outlet property="email" destination="Xfx-1s-hBt" id="imh-CG-sIn"/>
+                        <outlet property="password" destination="cwJ-yD-MPD" id="EVU-sA-SmO"/>
                         <outlet property="scrollView" destination="bXw-Hp-IzK" id="dMb-7S-06W"/>
+                        <segue destination="xEa-aE-Y5Y" kind="modal" identifier="loginSegue" modalTransitionStyle="crossDissolve" id="MYY-ql-PBa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="at9-kv-pOy" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,6 +12,9 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var buttonView: UIView!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // declare variables
     var scrollViewInitialY: CGFloat!
@@ -51,18 +54,20 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
         buttonView.center.y = buttonViewInitialY
         
     }
+  
     
     
-    @IBAction func didTapOut(sender: AnyObject) {
-        view.endEditing(true)
-    }
-
     
     @IBAction func didTapSignin(sender: AnyObject) {
         
-       
+        activityIndicator.startAnimating()
+        delay(2) {
+        self.activityIndicator.stopAnimating()
+        self.performSegueWithIdentifier("loginSegue", sender: nil)
+        }
     }
-
+    
+    
     /*
     // MARK: - Navigation
 
