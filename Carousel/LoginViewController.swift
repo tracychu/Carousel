@@ -10,10 +10,11 @@ import UIKit
 
 class LoginViewController: UIViewController, UIAlertViewDelegate {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var buttonView: UIView!
+    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // declare variables
@@ -60,6 +61,7 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
     
     @IBAction func didTapSignin(sender: AnyObject) {
         
+        
         activityIndicator.startAnimating()
         delay(2) {
         self.activityIndicator.stopAnimating()
@@ -68,11 +70,12 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
         let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
         // handle cancel response here. Doing nothing will dismiss the view.
         }
+            
         // add the cancel action to the alertController
         self.alertController.addAction(cancelAction)
-            
+
         self.presentViewController(self.alertController, animated: true) {
-                // optional code for what happens after the alert controller has finished presenting
+            // optional code for what happens after the alert controller has finished presenting
             }
             
         self.performSegueWithIdentifier("loginSegue", sender: nil)

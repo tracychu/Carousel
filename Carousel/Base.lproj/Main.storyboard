@@ -81,17 +81,17 @@
                                                 <rect key="frame" x="5" y="12" width="299" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="Xfx-1s-hBt">
-                                                <rect key="frame" x="13" y="30" width="280" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="i9T-Kl-6pk">
+                                                <rect key="frame" x="17" y="30" width="271" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="cwJ-yD-MPD">
-                                                <rect key="frame" x="13" y="75" width="280" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="E9d-Wi-qXK">
+                                                <rect key="frame" x="17" y="75" width="271" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -139,8 +139,8 @@
                     <connections>
                         <outlet property="activityIndicator" destination="pCM-RC-inT" id="hIJ-Fi-4hO"/>
                         <outlet property="buttonView" destination="vxu-Jp-gBz" id="PBW-XI-hlz"/>
-                        <outlet property="email" destination="Xfx-1s-hBt" id="imh-CG-sIn"/>
-                        <outlet property="password" destination="cwJ-yD-MPD" id="EVU-sA-SmO"/>
+                        <outlet property="email" destination="i9T-Kl-6pk" id="pb8-34-1nD"/>
+                        <outlet property="password" destination="E9d-Wi-qXK" id="QS8-HA-i0G"/>
                         <outlet property="scrollView" destination="bXw-Hp-IzK" id="dMb-7S-06W"/>
                         <segue destination="xEa-aE-Y5Y" kind="modal" identifier="loginSegue" modalTransitionStyle="crossDissolve" id="MYY-ql-PBa"/>
                     </connections>
