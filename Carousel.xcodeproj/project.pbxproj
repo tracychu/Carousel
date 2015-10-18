@@ -112,17 +112,17 @@
 		9A7466721BC93882002B4428 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
+				9A74667C1BC93882002B4428 /* LaunchScreen.storyboard */,
+				9A7466771BC93882002B4428 /* Main.storyboard */,
 				9A7466731BC93882002B4428 /* AppDelegate.swift */,
 				9A7466751BC93882002B4428 /* ViewController.swift */,
-				9A7466771BC93882002B4428 /* Main.storyboard */,
 				9A13CAF81BD104E700E3C2E8 /* LoginViewController.swift */,
 				9AB2A1541BD0F0C2001DACEC /* TutorialViewController.swift */,
 				9AB2A14E1BD0DA4E001DACEC /* ConversationsViewController.swift */,
 				9AFD64CE1BCE695700E0E617 /* ImageTimelineViewController.swift */,
 				9AFD64C01BCE270600E0E617 /* IntroViewController.swift */,
-				9A74667A1BC93882002B4428 /* Assets.xcassets */,
-				9A74667C1BC93882002B4428 /* LaunchScreen.storyboard */,
 				9A74667F1BC93882002B4428 /* Info.plist */,
+				9A74667A1BC93882002B4428 /* Assets.xcassets */,
 				9A13CAFA1BD14C0200E3C2E8 /* Common.swift */,
 			);
 			path = Carousel;
