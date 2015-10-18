@@ -68,11 +68,11 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
     
     
     @IBAction func didTapSignin(sender: AnyObject) {
+
         
-        
-        activityIndicator.startAnimating()
         
         if email.text == "tsc@gmail.com" && password.text == "password" {
+            activityIndicator.startAnimating()
             delay(2, closure: { () -> () in
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
                 self.activityIndicator.stopAnimating()
@@ -82,13 +82,11 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
             
             
         } else {if email.text!.isEmpty {
-                delay(2, closure: { () -> () in
                     let alert = UIAlertView(title: "Email Required", message: "Please enter your email address", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
-                    self.activityIndicator.stopAnimating()
-                    })
                 } else {
-                    let alert = UIAlertView(title: "Invalid Email of Password", message: "Please enter a valid email or password", delegate: self, cancelButtonTitle: "OK")
+                    activityIndicator.startAnimating()
+                    let alert = UIAlertView(title: "Invalid Email or Password", message: "Please enter a valid email or password", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
                     self.activityIndicator.stopAnimating()
         
