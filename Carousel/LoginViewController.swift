@@ -56,6 +56,14 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
         
     }
   
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
     
     
     
@@ -63,23 +71,31 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
         
         
         activityIndicator.startAnimating()
-        delay(2) {
-        self.activityIndicator.stopAnimating()
+        
+        if email.text == "tsc@gmail.com" && password.text == "password" {
+            delay(2, closure: { () -> () in
+                self.performSegueWithIdentifier("loginSegue", sender: nil)
+                self.activityIndicator.stopAnimating()
+                self.email.text = ""
+                self.password.text = ""
+            })
             
-        // create a cancel action
-        let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
-        // handle cancel response here. Doing nothing will dismiss the view.
+            
+        } else {if email.text!.isEmpty {
+                delay(2, closure: { () -> () in
+                    let alert = UIAlertView(title: "Email Required", message: "Please enter your email address", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                    self.activityIndicator.stopAnimating()
+                    })
+                } else {
+                    let alert = UIAlertView(title: "Invalid Email of Password", message: "Please enter a valid email or password", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                    self.activityIndicator.stopAnimating()
+        
+            }
         }
-            
-        // add the cancel action to the alertController
-        self.alertController.addAction(cancelAction)
-
-        self.presentViewController(self.alertController, animated: true) {
-            // optional code for what happens after the alert controller has finished presenting
-            }
-            
-        self.performSegueWithIdentifier("loginSegue", sender: nil)
-            }
+        
+        
     }
     
     
