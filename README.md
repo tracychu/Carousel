@@ -1,5 +1,7 @@
 # Carousel
 
+/cc @codepath 
+
 I completed the required stories and no optional stories.
 
 I spent ~20 hours on the assignment.
